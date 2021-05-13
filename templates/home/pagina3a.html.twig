@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% set MiVariable = 5 %}
+
+{% block body %}
+  {{parent()}} 
+  
+  {% if MiVariable == valor %}
+    <div> MiVariable = {{MiVariable}} es igual a Valor = {{valor}} </div>
+  {% else %}
+    <div> MiVariable = {{MiVariable}} no es igual a Valor = si{{valor}}</div>
+  {% endif %}
+  <br> 
+  
+  {% for i in range(low=1, high=20, step=1) %}
+     <div>Saludos</div>
+     {% apply upper %}
+       {{ param1 }}
+     {% endapply %}
+     <br>
+  {% endfor %}
+
+{% endblock %}

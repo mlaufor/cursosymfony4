@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+
+<form action="altausuario">
+
+
+{#{%  TODOS LOS INPUTS DE NUESTRO FORMULARIO   %}#}
+<input id="nombre" name="nombre">
+</form>
+
+{{ parent() }}
+
+
+<td>
+{% for rol in roles %}
+    <th>
+        <h1>{{rol}}</h1>
+    </th>
+{% endfor %}
+</td>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Usuario Registrado{% endblock %}
+
+{% block body %}
+
+  {% if valor == 1 %}
+      <div> Usuario {{email}} actualizado</div>
+  {% else %} 
+      {% if valor == 2 %}
+         <div> Usuario {{email}}  permitido</div>
+      {% else %} 
+           {% if valor == 3 %}
+              <div> Usuario inexistente</div>
+           {% endif %} 
+      {% endif %}   
+  {% endif %}
+{% endblock %}
